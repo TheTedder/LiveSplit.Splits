@@ -213,15 +213,15 @@ namespace LiveSplit.UI.Components
                         }
                     }
                 }
-                else if (component is ThinSeparatorComponent separator)
+                else if (component is ThinSeparatorComponent thinSeparator)
                 {
-                    var index = Components.IndexOf(separator);
+                    var index = Components.IndexOf(thinSeparator);
                     if (state.CurrentPhase == TimerPhase.Running || state.CurrentPhase == TimerPhase.Paused)
                     {
                         if (((SplitComponent)Components[index + 1]).Split == state.CurrentSplit)
-                            separator.LockToBottom = true;
+                            thinSeparator.LockToBottom = true;
                         else if (((SplitComponent)Components[index - 1]).Split == state.CurrentSplit)
-                            separator.LockToBottom = false;
+                            thinSeparator.LockToBottom = false;
                     }
                 }
             }
