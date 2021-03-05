@@ -489,7 +489,7 @@ namespace LiveSplit.UI.Components
             if (ColumnsList != null && LabelsList.Count != ColumnsList.Count())
             {
                 LabelsList.Clear();
-                foreach (var column in ColumnsList)
+                for (int i = 0; i < ColumnsList.Count(); i++)
                 {
                     LabelsList.Add(new SimpleLabel
                     {
